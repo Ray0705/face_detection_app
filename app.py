@@ -5,6 +5,10 @@ from PIL import Image,ImageEnhance
 import numpy as np 
 import os
 
+# configuring the page title and icon
+PAGE_CONFIG = {"page_title": "Face Detection App","page_icon":":smiley:","layout":"centered"}
+st.beta_set_page_config(**PAGE_CONFIG)
+
 @st.cache
 def load_image(img):
 	im = Image.open(img)
